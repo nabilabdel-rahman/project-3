@@ -1,9 +1,7 @@
 FROM python:3.8
-LABEL maintainer="noemail@website.domain"
-RUN apt-get update -y
+LABEL maintainer="nabilabdel-rahman@outlook.com"
 COPY . /app
 WORKDIR /app
-RUN python -m pip install -U pip
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
 CMD ["flask_vocab.py"]
